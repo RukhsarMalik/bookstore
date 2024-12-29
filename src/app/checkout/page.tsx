@@ -21,7 +21,7 @@ interface UserDetails {
 }
 
 const CheckoutPage = () => {
-  // Ensure that cartItems is typed properly using CartItem[]
+  // Ensure that cartItems is typed properly using CartItem[] and clearCart function
   const { cartItems, clearCart } = useCart();
 
   // Initialize the userDetails with the appropriate type
