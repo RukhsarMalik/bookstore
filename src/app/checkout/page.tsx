@@ -105,7 +105,7 @@ const CheckoutPage = () => {
   };
 
   return (
-    <div className="container mx-auto p-6 min-h-screen bg-white flex flex-col">
+    <div className="container mx-auto text-black p-6 min-h-screen bg-white flex flex-col">
       {orderPlaced ? (
         <div className="text-center mt-20 flex flex-col items-center justify-center flex-grow">
           <h2 className="text-2xl font-bold text-gray-800">Order placed successfully!</h2>
@@ -118,7 +118,7 @@ const CheckoutPage = () => {
         </div>
       ) : (
         <div className="flex-grow">
-          <h2 className="text-2xl font-semibold mb-4">Checkout</h2>
+          <h2 className="text-2xl text-black font-semibold mb-4">Checkout</h2>
           <div>
             {/* User Details */}
             <label className="block mb-2">Name</label>

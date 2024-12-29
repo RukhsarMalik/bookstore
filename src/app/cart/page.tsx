@@ -83,12 +83,29 @@ const CartPage = () => {
                       </td>
                       <td className="text-center p-4 border border-gray-200">
                         <div className="flex items-center justify-center">
+                          {/* Decrease Quantity */}
+                          <button
+                            onClick={() => handleQuantityChange(item.id, item.category, item.quantity - 1)}
+                            className="w-8 h-8 text-center border border-gray-300 rounded-l-lg bg-gray-100 hover:bg-gray-200"
+                          >
+                            -
+                          </button>
+                          
+                          {/* Quantity Input */}
                           <input
                             type="number"
-                            value={item.quantity && !isNaN(item.quantity) ? item.quantity : 1}  
-                            onChange={(e) => handleQuantityChange(item.id, item.category, parseInt(e.target.value) || 1)} 
-                            className="w-12 text-center text-black mx-2 border border-gray-300 rounded"
+                            value={item.quantity && !isNaN(item.quantity) ? item.quantity : 1}
+                            onChange={(e) => handleQuantityChange(item.id, item.category, parseInt(e.target.value) || 1)}
+                            className="w-12 text-center text-black border-t border-b border-gray-300"
                           />
+                          
+                          {/* Increase Quantity */}
+                          <button
+                            onClick={() => handleQuantityChange(item.id, item.category, item.quantity + 1)}
+                            className="w-8 h-8 text-center border border-gray-300 rounded-r-lg bg-gray-100 hover:bg-gray-200"
+                          >
+                            +
+                          </button>
                         </div>
                       </td>
                       <td className="text-center p-4 border border-gray-200">
