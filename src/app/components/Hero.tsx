@@ -10,9 +10,10 @@ const HeroSection = () => {
         <p className="text-lg mb-6">
           Explore the best collection of fiction, non-fiction, academic books, and more. Discover new worlds through books.
         </p>
-        <Link href="/shop" className="bg-[#D96846] text-white px-6 py-3 rounded-lg text-lg hover:bg-[#b85f3b] transition duration-300">
-          Shop Now
-        </Link>
+        <button className="bg-[#D96846] text-white px-6 py-3 rounded-lg text-lg hover:bg-[#b85f3b] transition duration-300">
+        Shop Now
+        </button>
+        
       </div>
     </section>
   );

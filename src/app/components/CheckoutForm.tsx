@@ -30,7 +30,7 @@ const CheckoutForm = ({ cartItems, handlePlaceOrder }: { cartItems: any[], handl
   };
 
   return (
-    <div className="mt-12">
+    <div className="text-black bg-gray-50 mt-12">
       <h2 className="text-2xl font-semibold mb-4">Checkout</h2>
       <div>
         <label className="block mb-2">Name</label>

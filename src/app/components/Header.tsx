@@ -139,16 +139,31 @@ const Header = () => {
           <FiX className="w-6 h-6" />
         </button>
         <nav className="p-4 space-y-4">
-          <Link href="/categories" className="block">
+        <Link href="/" className="block text-[#D96846]" >
+            Home
+          </Link>
+          <Link href="/categories" className="block text-[#D96846]" >
             Categories
           </Link>
-          <Link href="/login" className="block">
+          <Link href="/fiction" className="block">
+            Fiction
+          </Link>
+          <Link href="/non-fiction" className="block">
+            Non-Fiction
+          </Link>
+          <Link href="/academic" className="block">
+            Academic
+          </Link>
+          <Link href="/urdu" className="block">
+            Urdu Novels
+          </Link>
+          <Link href="/login" className="block text-[#D96846]">
             Login
           </Link>
-          <Link href="/register" className="block">
+          <Link href="/register" className="block text-[#D96846]">
             Register
           </Link>
-          <Link href="/cart" className="md:block flex items-center space-x-2">
+          <Link href="/cart" className="md:block flex text-[#D96846] items-center space-x-2">
             <FiShoppingCart className="w-5 h-5" />
             <span>
               Cart ({cartItems.length}) {/* Display cart item count */}
