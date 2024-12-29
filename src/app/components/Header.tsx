@@ -5,12 +5,12 @@ import clsx from "clsx";
 import { FiMenu, FiX, FiShoppingCart } from "react-icons/fi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { MdOutlineArrowRight } from "react-icons/md";
-import {useCart} from "../context/CartContext"; // Import CartContext
+import {useCart} from "../context/CartContext"; 
 
 const Header = () => {
 
 
-  const { cartItems } = useCart(); // Destructure cartItems from context
+  const { cartItems } = useCart(); 
 
   const [isCategoryOpen, setCategoryOpen] = useState(false);
   const [isEnglishBooksOpen, setEnglishBooksOpen] = useState(false);

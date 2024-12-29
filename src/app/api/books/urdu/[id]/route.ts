@@ -1,8 +1,6 @@
-// app/api/urdu-novels/route.ts
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
-export async function GET() {
-  const books = [
+const books = [
     {
       id: 1,
       title: "Peer-e-Kamil",
@@ -105,6 +103,20 @@ export async function GET() {
     }
   ];
   
-
-  return NextResponse.json(books);
-}
+export async function GET(req: Request) {
+    const url = new URL(req.url);
+    const pathSegments = url.pathname.split("/");
+  
+    const id = pathSegments[pathSegments.length - 1];  // Extract the book ID from the URL
+  
+    if (id && !isNaN(Number(id))) {
+      const book = books.find((book) => book.id === parseInt(id, 10));  
+      if (book) {
+        return NextResponse.json(book);  
+      } else {
+        return NextResponse.json({ error: "Book not found" }, { status: 404 });  
+      }
+    } else {
+      return NextResponse.json({ error: "Invalid ID" }, { status: 400 });  
+    }
+  }

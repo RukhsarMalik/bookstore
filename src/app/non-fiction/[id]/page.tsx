@@ -6,7 +6,7 @@ import { Book } from "../../types/type";
 import { useRouter } from "next/navigation";  
 import Image from "next/image";
 
-const FictionBookDetail = () => {
+const NonFictionBookDetail = () => {
   const { id } = useParams();  
   const [book, setBook] = useState<Book | null>(null);  
   const [error, setError] = useState<string>(""); 
@@ -18,7 +18,7 @@ const FictionBookDetail = () => {
   useEffect(() => {
     const fetchBookDetails = async () => {
       try {
-        const response = await fetch(`/api/books/fiction/${id}`);
+        const response = await fetch(`/api/books/non-fiction/${id}`);
         if (!response.ok) throw new Error("Book not found");
         const data = await response.json();
         setBook(data);
@@ -106,4 +106,4 @@ const FictionBookDetail = () => {
   );
 };
 
-export default FictionBookDetail;
+export default NonFictionBookDetail;

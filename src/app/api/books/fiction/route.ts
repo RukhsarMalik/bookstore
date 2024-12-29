@@ -1,7 +1,6 @@
-// app/api/books/fiction/route.ts
+
 import { NextResponse } from "next/server";
 
-// Sample books data
 const books = [
     {
         id: 1,
@@ -106,7 +105,6 @@ const books = [
         },
     ];
 
-// Handle GET request for all books
 export async function GET() {
-  return NextResponse.json(books);  // Return all books
+  return NextResponse.json(books);  
 }

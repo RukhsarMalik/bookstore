@@ -25,10 +25,10 @@ const AcademicSection = () => {
   }, []);
 
   return (
-    <section className="bg-gray-50 py-12 px-6 rounded-lg shadow-md">
+    <section className="bg-white py-12 px-6 text-black rounded-lg shadow-md">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-gray-800 mb-6">Academic Books</h2>
-        {/* Responsive Grid Layout */}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mb-8">
           {academicBooks.slice(0, 5).map((book) => (
             <BookCard key={book.id} book={book} />

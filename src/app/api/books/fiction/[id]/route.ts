@@ -113,13 +113,13 @@ export async function GET(req: Request) {
     const id = pathSegments[pathSegments.length - 1];  // Extract the book ID from the URL
   
     if (id && !isNaN(Number(id))) {
-      const book = books.find((book) => book.id === parseInt(id, 10));  // Find the book by ID
+      const book = books.find((book) => book.id === parseInt(id, 10));  
       if (book) {
-        return NextResponse.json(book);  // Return the specific book if found
+        return NextResponse.json(book);  
       } else {
-        return NextResponse.json({ error: "Book not found" }, { status: 404 });  // Return 404 if not found
+        return NextResponse.json({ error: "Book not found" }, { status: 404 });  
       }
     } else {
-      return NextResponse.json({ error: "Invalid ID" }, { status: 400 });  // Return error for invalid ID
+      return NextResponse.json({ error: "Invalid ID" }, { status: 400 });  
     }
   }
