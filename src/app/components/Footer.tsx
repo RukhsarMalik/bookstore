@@ -19,19 +19,19 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold">Quick Links</h4>
             <ul className="mt-2 space-y-2 text-sm">
-              <li><Link href="/about" className="hover:underline">About Us</Link></li>
-              <li><Link href="/categories" className="hover:underline">Categories</Link></li>
-              <li><Link href="/contact" className="hover:underline">Contact</Link></li>
-              <li><Link href="/terms" className="hover:underline">Terms of Service</Link></li>
+              <li className="hover:underline">About Us</li>
+              <li className="hover:underline">Categories</li>
+              <li className="hover:underline">Contact</li>
+              <li className="hover:underline">Terms of Service</li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold">Customer Service</h4>
             <ul className="mt-2 space-y-2 text-sm">
-              <li><Link href="/faq" className="hover:underline">FAQ</Link></li>
-              <li><Link href="/returns" className="hover:underline">Returns</Link></li>
-              <li><Link href="/shipping" className="hover:underline">Shipping Info</Link></li>
-              <li><Link href="/privacy" className="hover:underline">Privacy Policy</Link></li>
+              <li className="hover:underline" >FAQ</li>
+              <li className="hover:underline">Returns</li>
+              <li className="hover:underline">Shipping Info</li>
+              <li className="hover:underline">Privacy Policy</li>
             </ul>
           </div>
         </div>
@@ -40,18 +40,16 @@ const Footer = () => {
       {/* Social Media & Contact Section */}
       <div className="mt-8 flex flex-col md:flex-row justify-between items-center">
         <div className="flex space-x-6 mb-4 md:mb-0">
-          <Link href="https://facebook.com" target="_blank" className="text-white hover:text-gray-300">
-            <FaFacebookF className="w-6 h-6" />
-          </Link>
-          <Link href="https://twitter.com" target="_blank" className="text-white hover:text-gray-300">
-            <FaTwitter className="w-6 h-6" />
-          </Link>
-          <Link href="https://instagram.com" target="_blank" className="text-white hover:text-gray-300">
-            <FaInstagram className="w-6 h-6" />
-          </Link>
-          <Link href="https://linkedin.com" target="_blank" className="text-white hover:text-gray-300">
-            <FaLinkedinIn className="w-6 h-6" />
-          </Link>
+          
+            <FaFacebookF className="w-6 h-6 text-white hover:text-gray-300" />
+  
+            <FaTwitter className="w-6 h-6 text-white hover:text-gray-300" />
+          
+      
+            <FaInstagram className="w-6 h-6 text-white hover:text-gray-300" />
+   
+            <FaLinkedinIn className="w-6 h-6 text-white hover:text-gray-300" />
+      
         </div>
   
         {/* Contact Info */}
