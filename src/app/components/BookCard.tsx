@@ -20,7 +20,7 @@ const BookCard = ({ book }: BookCardProps) => {
   };
 
   const handleAddToCart = () => {
-    addToCart(book); // Add the current book to the cart
+    addToCart(book); 
   };
 
   return (

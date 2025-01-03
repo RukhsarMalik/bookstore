@@ -7,10 +7,10 @@ import Image from "next/image";
 const CartPage = () => {
   const { cartItems, removeFromCart, updateCartQuantity } = useCart();
   const [orderNotes, setOrderNotes] = useState("");
-  const router = useRouter(); // Router to navigate to checkout
+  const router = useRouter(); 
 
   useEffect(() => {
-    console.log("Cart Items:", cartItems); // Debugging
+    console.log("Cart Items:", cartItems); 
   }, [cartItems]);
 
   const handleQuantityChange = (id: number, category: string, quantity: number) => {
@@ -25,7 +25,7 @@ const CartPage = () => {
 
       if (isNaN(price)) {
         console.error(`Invalid price for item with title: ${item.title}`, item.price);
-        return total; // Skip this item if the price is invalid
+        return total; 
       }
 
       return total + price * item.quantity;
@@ -39,7 +39,7 @@ const CartPage = () => {
   };
 
   const handleCheckout = () => {
-    router.push("/checkout"); // Navigate to the checkout page
+    router.push("/checkout"); 
   };
 
   return (
